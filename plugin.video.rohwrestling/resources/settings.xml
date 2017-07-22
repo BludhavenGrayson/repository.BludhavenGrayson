@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+
+	<category label="General">
+		<setting id="ringside" type="bool" label="Enable Ringside Membership" default="false"/>
+		<setting id="username" type="text" label="Username" visible="eq(-1,true)"/>
+		<setting id="password" type="text" label="Password" visible="eq(-2,true)"/>
+	</category>
+	
+</settings>

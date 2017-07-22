@@ -1,0 +1,11 @@
+<settings>
+	<category label="Settings">
+		<setting label="Some channels require a login.[CR]Register at: tvplayer.com/account/create" type="lsep"/>
+		<setting id="premium" type="bool" label="Log in now?" default="false"/>
+		<setting id="email" type="text" label="Email" default="" enable="!eq(-1,false)"/>
+		<setting id="password" type="text" label="Password" default="" enable="!eq(-2,false)"/>	
+		<setting id="token" type="text" label="token" default="" visible="false"/>
+		<setting id="expiry" type="text" label="expiry" default="" visible="false"/>
+		<setting id="referer" type="text" label="referer" default="" visible="false"/>
+	</category>
+</settings>

@@ -46,7 +46,7 @@ def main():
     response.close()
 
     pattern = ""
-    matches = plugintools.find_multiple_matches(link,'<p class="channelsicon" style="">(.*?)</div>')
+    matches = plugintools.find_multiple_matches(link,'<p class="channelsicon" style.+?>(.*?)</div>')
     
     for entry in matches:
        

@@ -33,10 +33,28 @@ import xbmcaddon
 from resources.lib.modules.common import *
 from resources.lib.modules.plugintools import *
 
-icon      = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvcatchup.com', 'icon.jpg'))
-fanart    = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvcatchup.com', 'fanart.jpg'))
+icon   = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvcatchup.com', 'icon.jpg'))
+fanart = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvcatchup.com', 'fanart.jpg'))
 
 def main():
+    listings()
+    addLink('Blaze - EPG Unavailable','http://tvcatchup.com/watch/blaze',2,'https://www.tvcatchup.com/channel-images/blaze.png')
+    addLink('CITV - EPG Unavailable','http://tvcatchup.com/watch/citv',2,'https://www.tvcatchup.com/channel-images/citv.png')
+    addLink('E4 - EPG Unavailable','http://tvcatchup.com/watch/e4',2,'https://www.tvcatchup.com/channel-images/e4.png')
+    addLink('Film4 - EPG Unavailable','http://tvcatchup.com/watch/film4',2,'https://www.tvcatchup.com/channel-images/film4.png')
+    addLink('Food Network - EPG Unavailable','http://tvcatchup.com/watch/foodnetwork',2,'https://www.tvcatchup.com/channel-images/foodnetwork.png')
+    addLink('ITV2 - EPG Unavailable','http://tvcatchup.com/watch/itv2',2,'https://www.tvcatchup.com/channel-images/itv2.png')
+    addLink('ITV3 - EPG Unavailable','http://tvcatchup.com/watch/itv3',2,'https://www.tvcatchup.com/channel-images/itv3.png')
+    addLink('Pick - EPG Unavailable','http://tvcatchup.com/watch/pick',2,'https://www.tvcatchup.com/channel-images/pick.png')
+    addLink('Spike - EPG Unavailable','http://tvcatchup.com/watch/spike',2,'https://www.tvcatchup.com/channel-images/spike.png')
+    addLink('Sky News - EPG Unavailable','http://tvcatchup.com/watch/skynews',2,'https://www.tvcatchup.com/channel-images/skynews.png')
+    addLink('Travel Channel - EPG Unavailable','http://tvcatchup.com/watch/travelchannel',2,'https://www.tvcatchup.com/channel-images/travelchannel.png')
+    addLink('True Crime - EPG Unavailable','http://tvcatchup.com/watch/truecrime',2,'https://www.tvcatchup.com/channel-images/truecrime.png')
+    addLink('truTV - EPG Unavailable','http://tvcatchup.com/watch/trutv',2,'https://www.tvcatchup.com/channel-images/trutv.png')
+    addLink('YourTV - EPG Unavailable','http://tvcatchup.com/watch/yourtv',2,'https://www.tvcatchup.com/channel-images/yourtv.png')
+    xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORT_METHOD_LABEL)
+
+def listings():
     url       = 'https://tvcatchup.com/'
     iconimage = ""
     req       = urllib2.Request(url)

@@ -48,7 +48,7 @@
 
 </addon>
 
-<addon id="plugin.video.pac12.network" name="PAC-12 Network" version="1.0.0" provider-name="BludhavenGrayson">
+<addon id="plugin.video.pac12.network" name="PAC-12 Network" version="1.0.1" provider-name="BludhavenGrayson">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
@@ -80,7 +80,7 @@
 
 </addon>
 
-<addon id="plugin.video.tvcatchup.com" name="TVCatchup.com" version="1.1.0" provider-name="BludhavenGrayson">
+<addon id="plugin.video.tvcatchup.com" name="TVCatchup.com" version="1.2.0" provider-name="BludhavenGrayson">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>

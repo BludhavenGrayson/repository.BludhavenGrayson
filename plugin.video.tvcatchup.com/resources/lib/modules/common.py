@@ -27,6 +27,8 @@ import datetime
 import string
 import plugintools
 import xbmcaddon
+import base64
+import xbmc
 
 fanart    = 'special://home/addons/plugin.video.tvcatchup.com/fanart.jpg'
 
@@ -37,7 +39,8 @@ def play(url):
 	
 def open_url(url):
 	req      = urllib2.Request(url)
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	#req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	req.add_header('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11')
 	response = urllib2.urlopen(req)
 	link     = response.read()
 	link     = cleanHex(link)
@@ -69,11 +72,46 @@ def cleanHex(text):
     try :return re.sub("(?i)&#\w+;", fixup, text.decode('ISO-8859-1').encode('utf-8'))
     except:return re.sub("(?i)&#\w+;", fixup, text.encode("ascii", "ignore").encode('utf-8'))
 	
-def	tvcatchup(url):
+def tvcatchup(url):
+	link = open_url(url)
+	link = link
+	b64  = re.compile('=  "(.+?)";').findall(link)
+	for base64str in b64:
+		decodedstr = base64.b64decode(base64str)
+		play(decodedstr)
+	
+def	tvcatchup2(url):
     url       = url
     iconimage = ""
     req       = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    #req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    req.add_header('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11')
+    #req.add_header('User-Agent', 'Magic Browser')
+    response  = urllib2.urlopen(req)
+    link      = response.read()
+    response.close()
+
+    pattern = ""
+    matches = plugintools.find_multiple_matches(link,">jwplayer(.*?)</script>")
+    
+    for entry in matches:
+       
+        #url = plugintools.find_single_match(entry,'var.+?"(.+?)";')
+        url = plugintools.find_single_match(entry,'=  "(.+?)";')
+        decrypt = base64.urlsafe_b64decode(url)
+        #url = url
+        xbmc.log('[plugin.video.tvcatchup.com] Attempting to play: %s' % url,  xbmc.LOGDEBUG)
+        print url
+        #decrypted = unpad(cipher.decrypt(decodestr))
+
+        play(decrypt)
+	
+def	tvcatchup_old(url):
+    url       = url
+    iconimage = ""
+    req       = urllib2.Request(url)
+    #req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    req.add_header('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11')
     response  = urllib2.urlopen(req)
     link      = response.read()
     response.close()
@@ -84,5 +122,6 @@ def	tvcatchup(url):
     for entry in matches:
        
         url = plugintools.find_single_match(entry,"file: '(.+?)'")
+        xbmc.log('[plugin.video.tvcatchup.com] Attempting to play: %s' % url,  xbmc.LOGDEBUG)
 
         play(url)

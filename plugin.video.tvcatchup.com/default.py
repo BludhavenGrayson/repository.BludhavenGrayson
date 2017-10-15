@@ -37,10 +37,11 @@ icon      = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.
 fanart    = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvcatchup.com', 'fanart.jpg'))
 
 def main():
-    url       = 'https://tvcatchup.com/'
+    url       = 'http://tvcatchup.com/'
     iconimage = ""
     req       = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    req.add_header('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11')
+    #req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
     response  = urllib2.urlopen(req)
     link      = response.read()
     response.close()

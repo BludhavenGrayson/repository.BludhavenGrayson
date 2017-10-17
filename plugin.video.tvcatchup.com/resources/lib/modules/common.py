@@ -33,7 +33,7 @@ import xbmc
 fanart    = 'special://home/addons/plugin.video.tvcatchup.com/fanart.jpg'
 
 def play(url):
-	resolved = url
+	resolved = url+'|User-Agent=TVCatchup/1.0.1 (samsung/SM-J7008; Android 4.4.2/KOT49H)'
 	item     = xbmcgui.ListItem(path=resolved)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
 	

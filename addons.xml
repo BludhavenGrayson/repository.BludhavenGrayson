@@ -80,7 +80,7 @@
 
 </addon>
 
-<addon id="plugin.video.tvcatchup.com" name="TVCatchup.com" version="1.4.1" provider-name="BludhavenGrayson">
+<addon id="plugin.video.tvcatchup.com" name="TVCatchup.com" version="1.5.0" provider-name="BludhavenGrayson">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>

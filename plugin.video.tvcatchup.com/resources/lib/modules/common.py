@@ -72,13 +72,20 @@ def cleanHex(text):
     try :return re.sub("(?i)&#\w+;", fixup, text.decode('ISO-8859-1').encode('utf-8'))
     except:return re.sub("(?i)&#\w+;", fixup, text.encode("ascii", "ignore").encode('utf-8'))
 	
-def tvcatchup(url):
+def tvcatchup_base64(url):
 	link = open_url(url)
 	link = link
 	b64  = re.compile('=  "(.+?)";').findall(link)
 	for base64str in b64:
 		decodedstr = base64.b64decode(base64str)
 		play(decodedstr)
+		
+def tvcatchup(url):
+	link  = open_url(url)
+	link  = link
+	match = re.compile('<source src="(.+?)" type="application/x-mpegURL">').findall(link)
+	for url in match:
+		play(url)
 	
 def	tvcatchup2(url):
     url       = url

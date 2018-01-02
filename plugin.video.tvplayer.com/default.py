@@ -40,14 +40,401 @@ if os.path.exists(cookiePath) == False:
 		os.makedirs(cookiePath)
 
 def main():
-	link  = openURL('https://pastebin.com/raw/njE3Z76f')
-	link  = link
-	match = re.compile('<li data-name="(.+?)" class="online free"><a href=".+?" title=".+?"><img src="https://assets.tvplayer.com/common/logos-square/150/Inverted/(.+?).png" alt=.+?"></a></li>').findall(link)
-	for name,url in match:
-		iconimage = 'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url
-		addLink(name,url,1,iconimage)
-		xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORT_METHOD_LABEL)
-
+	
+	name = 'BBC One'
+	url  = '89'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'BBC Two'
+	url  = '90'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'ITV'
+	url  = '204'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Channel 4'
+	url  = '92'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Five'
+	#url  = '93'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Dave'
+	url  = '300'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Really'
+	url  = '306'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Yesterday'
+	url  = '308'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Drama'
+	url  = '346'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Home'
+	url  = '512'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Quest'
+	url  = '327'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Quest Red'
+	url  = '577'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'ITV2'
+	url  = '556'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'ITV3'
+	url  = '558'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'More4'
+	url  = '563'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'ITV4'
+	url  = '559'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'ITVBe'
+	url  = '557'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = '5Star'
+	#url  = '566'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Spike'
+	#url  = '568'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Food Network'
+	url  = '125'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Travel Channel'
+	url  = '126'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = '4seven'
+	url  = '565'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'CNN International'
+	url  = '286'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'BBC Four'
+	url  = '110'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'QVC'
+	url  = '247'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'BET'
+	url  = '572'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Lifetime'
+	#url  = '281'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'TLC'
+	#url  = '330'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Universal'
+	#url  = '597'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Syfy'
+	#url  = '594'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'E!'
+	#url  = '596'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'W'
+	#url  = '307'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'GOLD'
+	#url  = '303'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Alibi'
+	#url  = '299'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Comedy Central'
+	#url  = '282'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'MTV'
+	#url  = '288'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Comedy Central Extra'
+	#url  = '323'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Sony Entertainment'
+	#url  = '298'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Movies24'
+	#url  = '595'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'History'
+	#url  = '283'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Discovery'
+	#url  = '328'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Investigation Discovery'
+	#url  = '334'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Discovery Turbo'
+	#url  = '335'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Animal Planet'
+	#url  = '331'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'H2'
+	#url  = '284'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Crime + Investigation'
+	#url  = '285'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Viceland'
+	#url  = '588'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Good Food'
+	#url  = '304'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Eden'
+	#url  = '302'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'National Geographic'
+	#url  = '507'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'NatGeo Wild'
+	#url  = '505'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Eurosport 1'
+	#url  = '332'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Eurosport 2'
+	#url  = '333'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'BoxNation'
+	#url  = '591'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Ginx'
+	#url  = '309'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'CBeebies'
+	url  = '114'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'CBBC'
+	url  = '113'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'CITV'
+	url  = '560'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Nickelodeon'
+	#url  = '222'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Nick Jr'
+	#url  = '223'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Nick Jr Too'
+	#url  = '516'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Cartoon Network'
+	#url  = '278'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Boomerang'
+	#url  = '280'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'Cartoonito'
+	#url  = '179'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	#name = 'BabyTV'
+	#url  = '506'
+	#addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Heart'
+	url  = '153'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Capital TV'
+	url  = '157'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Clubland'
+	url  = '225'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Chilled'
+	url  = '226'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Channel AKA'
+	url  = '227'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'NOW Music'
+	url  = '228'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Dave ja vu'
+	url  = '317'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Yesterday+1'
+	url  = '318'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Food Network+1'
+	url  = '254'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Travel Channel+1'
+	url  = '255'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'QVC Plus'
+	url  = '344'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Fashion TV'
+	url  = '193'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Revelation TV'
+	url  = '262'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'GOD TV'
+	url  = '573'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'S4C'
+	url  = '251'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'BBC Alba'
+	url  = '236'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Community Channel'
+	url  = '259'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Notts TV'
+	url  = '590'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'BBC News'
+	url  = '111'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Bloomberg'
+	url  = '514'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'France 24'
+	url  = '199'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'NHK World'
+	url  = '301'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Euronews'
+	url  = '287'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Newsy'
+	url  = '575'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Fascination TV'
+	url  = '576'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'TRT World'
+	url  = '580'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'BBC Parliament'
+	url  = '345'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Al Jazeera'
+	url  = '146'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'Russia Today'
+	url  = '156'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'QVC Extra'
+	url  = '248'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'QVC Style'
+	url  = '249'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'QVC Beauty'
+	url  = '250'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	name = 'TV Warehouse'
+	url  = '584'
+	addLink(name,url,1,'https://assets.tvplayer.com/common/logos-square/256/Inverted/%s.png' % url)
+	
+	xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORT_METHOD_LABEL)	
+	
 def login():
 	loginURL = 'https://tvplayer.com/account/login/'
 	email    = plugin.getSetting('email')
@@ -73,7 +460,7 @@ def openURL(url):
 def openStream(url):
 	import time
 	timestamp = int(time.time()) + 4 * 60 * 60
-	header    = {'Token':plugin.getSetting('token'),'Token-Expiry': plugin.getSetting('expiry'),'Referer':plugin.getSetting('referer'),'User-Agent': 'iPhone/iOS 8.4 (iPhone; U; CPU iPhone OS 8_4 like Mac OS X;)'}
+	header    = {'Token':plugin.getSetting('token'),'Token-Expiry': plugin.getSetting('expiry'),'Referer':plugin.getSetting('referer'),'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'}
 	req       = urllib2.Request(url,headers=header)
 	response  = urllib2.urlopen(req)
 	link      = response.read()
@@ -100,7 +487,7 @@ def tvplayer(url):
 	headers   = {'Host': 'api.tvplayer.com','Connection': 'keep-alive','Origin': 'http://api.tvplayer.com','User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36','Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8','Accept': '*/*','Accept-Encoding': 'gzip, deflate','Accept-Language': 'en-US,en;q=0.8'}
 	LINK      = net.http_POST(postURL, data,headers=headers).content
 	net.saveCookies(cookieJar)
-	return re.compile('stream": "(.+?)"').findall(LINK)[0]
+	return re.compile('stream":"(.+?)"').findall(LINK)[0]
 
 def play(name,url,iconimage):
 	stream  = tvplayer(url)

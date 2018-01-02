@@ -96,7 +96,7 @@
 
 </addon>
 
-<addon id="plugin.video.tvplayer.com" name="TVPlayer.com" version="1.0.0" provider-name="BludhavenGrayson">
+<addon id="plugin.video.tvplayer.com" name="TVPlayer.com" version="1.0.1" provider-name="BludhavenGrayson">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
     </requires>
